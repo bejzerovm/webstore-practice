@@ -210,14 +210,14 @@ a {
   bottom: 52%;
   width: 5%;
   right: 20px;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 .chevron-left {
   position: absolute;
   bottom: 50%;
   width: 5%;
   left: 18px;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 .chevron-right:hover,
 .chevron-left:hover {
