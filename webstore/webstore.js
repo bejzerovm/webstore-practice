@@ -9,11 +9,21 @@ const images = [
 let nIntervId;
 num = 0
 let op = 1
+
+
+
+
+
 //View
 
 
+
+
+
 const changeImage = () => {
-  num = num + 1
+  if (num < 0) {
+    num = num+3
+  }
   num = num % 3
   image1.src = images[num]
   clearInterval(nIntervId);
@@ -44,14 +54,6 @@ const opacityChange = () => {
   }
   
 }
-
-
-
-
-
-
-
-//Controller
 const fadeOut = () => {
   if (!nIntervId) {
       nIntervId = setInterval(opacityChange, 25);
@@ -61,8 +63,28 @@ const fadeIn = () => {
   if (!nIntervId) {
       nIntervId = setInterval(opacityChange2, 25);
     }
+  }
+
+
+
+
+
+//Controller
+
+const nextImage = () => {
+  num = num + 1
+  fadeOut() 
+}
+
+
+
+
+const prevImage = () => {
+  num = num - 1
+  fadeOut()
 
 }
+
 
 
 
