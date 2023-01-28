@@ -7,6 +7,7 @@
   <link rel="preconnect" href="/logo/logo-no-background.png">
   <title>AcPhone</title>
   <link rel="stylesheet" href="webstore.css">
+  <script src="webstore.js"></script>
 </head>
 <body>
   <div class="nav-belt">
@@ -44,13 +45,13 @@
   </div>
   <div class="daily-sales">
     <a href="https://www.samsung.com/us/smartphones/galaxy-s22-ultra/buy/galaxy-s22-ultra-128gb-unlocked-sm-s908uzwaxaa/">
-      <img  class="sales-images" src="sales/s22Ultra-sale.webp">
+      <img id="sales-image" class="sales-images" src="sales/s22Ultra-sale.webp">
     </a>  
     <div>
-        <img class="chevron-right" src="icons/chevron-right.png">
-    </div>
+        <img class="chevron-right" src="icons/chevron-right.png" >
+      </div>
     <div>
-      <img class="chevron-left" src="icons/chevron-left.png">
+      <img class="chevron-left" src="icons/chevron-left.png" onclick="changePicture()">
     </div>
   </div> 
   <div class="phone-catalog">

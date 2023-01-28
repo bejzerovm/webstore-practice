@@ -39,6 +39,9 @@ a {
   cursor: pointer;
 }
 .daily-sales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   margin-bottom: 0;
 }
