@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <title>Sign Up</title>
-  <link type="stylesheet" href="sign-up-page.css">
+  <link rel="stylesheet" href="sign-up-page.css">
+  <script href="sign-up-page.js"></script>
 </head>
 <body>
   <p>
     <a href="webstore.html">
-    <img src="logo/logo-no-background.png" width="200px">
+      <img src="logo/logo-no-background.png" width="200px">
     </a>
   </p>
   <p style="margin-top:60px;">
@@ -16,17 +17,24 @@
   </p>
 
   <p>
-    <input class="email" placeholder=" Email" type="text">
+    <input id="email-box" class="email-box" placeholder=" Email" type="text">
+
   </p>
   <p>
-    <input class="email" placeholder=" Password" type="text">
+    <input id="password-box" class="email-box" placeholder=" Password" type="text">
   </p>
   
   
   
   
 
-  <p ><button class="but"><strong>Sign Up</strong></button></p>
+  <p ><button onclick="signUp()" id="sign-up-button" class="but"><strong>Sign Up</strong></button></p>
+
+  <script>
+    const emailBox = document.getElementById("email-box")
+    const email = emailBox.value
+    const passwordBox = document.getElementById("password-box")
+</script>
 
 
 
