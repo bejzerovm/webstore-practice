@@ -45,7 +45,9 @@ const opacityChange = () => {
 }
 
 
-
+const test = () => {
+  image1.src = images[1]
+}
 
 
 
