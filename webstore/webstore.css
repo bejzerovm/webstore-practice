@@ -49,7 +49,6 @@ a {
   cursor: pointer;
 }
 .sales-images {
-
   width: 100%;
   margin-bottom: 0 ;
 
@@ -214,6 +213,7 @@ a {
   width: 5%;
   right: 20px;
   transition-duration: 0.1s;
+  opacity: 0.5;
 }
 .chevron-left {
   position: absolute;
@@ -221,9 +221,10 @@ a {
   width: 5%;
   left: 18px;
   transition-duration: 0.1s;
+  opacity: 0.5;
 }
 .chevron-right:hover,
 .chevron-left:hover {
-  opacity: 50%;
+  opacity: 0.3;
   cursor: pointer;
 }

@@ -4,10 +4,11 @@ const images = [
   'sales/sale-2.png',
   'sales/sale-3.png'
 ];
-let image1 = document.getElementById('sales-image')
+
+
 let nIntervId;
 num = 0
-
+let op = 1
 //View
 
 
@@ -18,7 +19,7 @@ const changeImage = () => {
   clearInterval(nIntervId);
   nIntervId = null;
 }
-let op = 1
+
 
 const opacityChange2 = () => {
   if (op < 1) {
@@ -44,10 +45,6 @@ const opacityChange = () => {
   
 }
 
-
-const test = () => {
-  image1.src = images[1]
-}
 
 
 
