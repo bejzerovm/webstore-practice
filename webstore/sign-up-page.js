@@ -28,8 +28,7 @@ const signUp = () => {
     passwords.push(password)
     localStorage.setItem('emails', JSON.stringify(emails))
     localStorage.setItem('passwords', JSON.stringify(passwords))
-    emailBox.value =''
-    passwordBox.value = ''
+    window.location.href = "log-in-page.html"
   } else { 
     passwordBox.placeholder='Enter your password'
     emailBox.placeholder='Enter your email'

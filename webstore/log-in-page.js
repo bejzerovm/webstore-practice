@@ -22,12 +22,13 @@ let LogInStatus = ''
 
 
 const logIn = () => {
-  email = emailBox.value
-  password = passwordbox.value
-  if (email in emails && password in passwords) {
+  let email = emailBox.value
+  let password = passwordBox.value
+  if (emails.includes(email) && passwords.includes(password)) {
     LogInStatus = "logged-in"
     localStorage.setItem('status', JSON.stringify(LogInStatus))
-
+    console.log('You Logged In')
+    window.location.href = "webstore-logged-in.html"
   } else {
       console.log('wrong')
   }
