@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <title>Log in</title>
   <style>
     body {
@@ -47,7 +48,8 @@
       outline-style: solid ;
     }
 
-    .email {
+    .email-box {
+      padding-left: 7px;
       width: 292px;
       border-radius: 8px;
       border-style: solid;
@@ -57,6 +59,7 @@
 
     }
   </style>
+  <script scr="log-in-page.js"></script>
 </head>
 <body>
   <p>
@@ -67,18 +70,21 @@
 
 
   <p style="margin-top:60px;">
-    <input class="email" placeholder=" Email" type="text">
+    <input id="emailBox" class="email-box" placeholder="Email" type="text">
   </p>
   <p>
-    <input class="email" placeholder=" Password" type="text">
+    <input id="passwordBox" class="email-box" placeholder="Password" type="password">
   </p>
   
   
   
   
 
-  <p ><button class="but"><strong>Sign Up</strong></button></p>
-
+  <p ><button class="but"><strong>Log in</strong></button></p>
+<script>
+const emailBox = document.getElementById('emailBox')
+const passwordBox = document.getElementById('passwordBox')
+</script>
 
 
 </body>
