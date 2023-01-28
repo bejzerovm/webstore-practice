@@ -26,6 +26,7 @@ p {
 }
 .first-name,
 .last-name {
+  padding-left: 7px;
   display:inline-block;
   width: 140px;
   border-radius: 8px;
@@ -43,6 +44,7 @@ input:focus {
 }
 
 .email-box {
+  padding-left: 7px;
   width: 292px;
   border-radius: 8px;
   border-style: solid;
