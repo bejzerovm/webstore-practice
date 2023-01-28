@@ -28,6 +28,8 @@ const logIn = () => {
     LogInStatus = "logged-in"
     localStorage.setItem('status', JSON.stringify(LogInStatus))
 
+  } else {
+      console.log('wrong')
   }
 }
 
