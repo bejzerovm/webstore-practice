@@ -8,6 +8,22 @@
   <title>AcPhone</title>
   <link rel="stylesheet" href="webstore.css">
   <script src="webstore.js"></script>
+  <style>
+    .cart-icon {
+      position:relative;
+      bottom: 20px;
+      left: 117px;
+    }
+    .cart-icon:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    .your-cart:hover,
+    .profile-icon:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
   <div class="nav-belt">
@@ -32,10 +48,10 @@
         Support
       </div>
       <div>
-        <img src="icons/your-cart-icon.png" width = 50px >
+        <img class="your-cart" src="icons/your-cart-icon.png" width = 50px id="your-cart-icon">
       </div>
       <div>
-        <img src="icons/profile-icon.png" width="50px">
+        <img class="profile-icon" src="icons/profile-icon.png" width="50px" id="profile-icon">
       </div>
     </div>
   </div>
@@ -61,6 +77,9 @@
           </div>
         <img class="phone-image" src="phones/redmi-A1+.png">
         </div>
+        <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
+        </div>
       </a>
     </div>
     <div class="phone-preview">
@@ -70,15 +89,22 @@
           <div class="phone-discription">108MP pro-grade camera · 120W Xiaomi HyperCharge </div>
           <img class="phone-image"  src="phones/xiaomi-11T-Pro.png">
         </div>
+        <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
+        </div>
+
       </a>
     </div>
     <div class="phone-preview">
       <a style="display:inline-block; color:black;text-decoration: none;" href="https://www.mi.com/global/product/xiaomi-12t/">
-      <div class="phone-info">
+        <div class="phone-info">
           <div class="phone-title">Xiaomi 12T</div>
           <div class="phone-discription">Make moments mega</div>
          
           <img class="phone-image"  src="phones/xiaomi-12T.png">
+        </div>
+        <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
         </div>
       </a> 
     </div>  
@@ -97,6 +123,9 @@
           Fingerprint sensor</div>
         <img class="phone-image" src="phones/redmi-10C.png">
       </div>
+      <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
+        </div>
       </a>
     </div>
     <div   class="phone-preview">
@@ -106,6 +135,10 @@
         <div class="phone-discription">108MP pro-grade camera · 120W Xiaomi HyperCharge </div>
         <img class="phone-image"  src="phones/redmi-note-11-pro.png">
       </div>
+      <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
+        </div>
+
       </a>
     </div>
     <div class="phone-preview">
@@ -115,6 +148,10 @@
           <div class="phone-discription">Make moments mega</div>
           <img class="phone-image"  src="phones/redmi-note-11.png">
         </div>
+        <div style="display: inline-block;">
+          <img class="cart-icon" src="icons/cart-icon.png" width="30px">
+        </div>
+
       </a>
     </div>
   </div>

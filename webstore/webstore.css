@@ -14,7 +14,9 @@ a {
   background-color: rgb(243, 243, 243);
 }
 
-
+img:hover {
+  cursor: pointer;
+}
 .logo {
   display: inline-block;
   width: 70px;
