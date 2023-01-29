@@ -11,10 +11,17 @@
   <style>
     .cart-content {
       position: absolute;
-      background-color: aquamarine;
+      line-height: 18px;
+      border: solid;
+      border-radius: 3px;
+      background-color: lightgray;
+      border-color: rgb(179, 179, 179);
+      box-shadow: 0px 5px 10px gray;
       z-index: 10;
       top: 35px;
       opacity: 0;
+      font-size: 10px;
+      width: 100px;
     }
     
     .badge {
@@ -71,11 +78,11 @@
       <div class="support-button">
         Support
       </div>
-      <div onclick="ViewContent()" id="your-cart" style="position: relative;display: flex; justify-content: center;">
-        <img  class="your-cart" src="icons/your-cart-icon.png" width = 50px id="your-cart-icon">
+      <div onmouseout="cartContent.style.opacity = 0" id="your-cart" style="position: relative;display: flex; justify-content: center; padding: 5px; background-color: antiquewhite;">
+        <img onclick="ViewContent()"  class="your-cart" src="icons/your-cart-icon.png" width = 50px id="your-cart-icon">
         <span id="badge" class = "badge">1</span>
         <div id="cart-content" class="cart-content">
-         
+          
         </div>
       </div>
       <div>
@@ -106,7 +113,7 @@
         <img class="phone-image" src="phones/redmi-A1+.png">
         </div>
         </a>
-        <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+        <img class="cart-icon" id="Redmi A1+" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
         </div>
     <div class="phone-preview">
       <a style="color:black;text-decoration: none;" href="https://www.mi.com/global/product/xiaomi-11t-pro/">
@@ -116,7 +123,7 @@
           <img class="phone-image"  src="phones/xiaomi-11T-Pro.png">
         </div>
       </a>
-      <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+      <img class="cart-icon" id="Xiaomi 11T Pro" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
       </div>
     <div class="phone-preview">
       <a style="display:inline-block; color:black;text-decoration: none;" href="https://www.mi.com/global/product/xiaomi-12t/">
@@ -127,7 +134,7 @@
           <img class="phone-image"  src="phones/xiaomi-12T.png">
         </div>
       </a> 
-        <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+        <img class="cart-icon" id="Xiaomi 12T" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
       </div>  
   </div>
   <div class="daily-sales">
@@ -145,7 +152,7 @@
         <img class="phone-image" src="phones/redmi-10C.png">
       </div>
       </a>
-      <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+      <img class="cart-icon" id="Redmi 10C" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
       </div>
     <div   class="phone-preview">
       <a href="https://www.mi.com/global/product/redmi-note-11-pro/">
@@ -155,7 +162,7 @@
         <img class="phone-image"  src="phones/redmi-note-11-pro.png">
       </div>
       </a>
-      <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+      <img class="cart-icon" id="Redmi Note 11 Pro" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
       </div>
     <div class="phone-preview">
       <a href="https://www.mi.com/global/product/redmi-note-11/">
@@ -165,7 +172,7 @@
           <img class="phone-image"  src="phones/redmi-note-11.png">
         </div>
       </a>  
-        <img class= "cart-icon" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
+        <img class="cart-icon" id="Redmi Note 11" onclick="addToCart(this)" src="icons/cart-icon.png" width="30px">
     </div>
   </div>
   <div class="daily-sales">
@@ -190,10 +197,11 @@ const cartContent = document.getElementById('cart-content')
 
 
   const ViewContent = () => {
-    cartContent.style.opacity = 1
-
+    if (cartCounter != 0) {
+    cartContent.style.opacity = 1 
+    }
+    
   }
-
 
 
 
@@ -207,7 +215,9 @@ const cartContent = document.getElementById('cart-content')
   badge.innerText = cartCounter
   elem.animate(iconSpinning, iconTiming)
   setTimeout(() => {  elem.remove(); }, 250);
-  
+  const phone = document.createElement('div')
+  phone.innerText = elem.id
+  cartContent.appendChild(phone)
 }
    
    
