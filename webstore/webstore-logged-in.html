@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="webstore.css">
   <script src="webstore.js"></script>
   <style>
+    .phone-in-cart {
+      background-color: rgb(220, 220, 220);
+      margin: 3px 0px;
+      border-radius: 3px;
+    }
     .cart-content {
       position: absolute;
       line-height: 18px;
@@ -78,7 +83,7 @@
       <div class="support-button">
         Support
       </div>
-      <div onmouseout="cartContent.style.opacity = 0" id="your-cart" style="position: relative;display: flex; justify-content: center; padding: 5px; background-color: antiquewhite;">
+      <div id="your-cart" style="position: relative;display: flex; justify-content: center; ">
         <img onclick="ViewContent()"  class="your-cart" src="icons/your-cart-icon.png" width = 50px id="your-cart-icon">
         <span id="badge" class = "badge">1</span>
         <div id="cart-content" class="cart-content">
@@ -198,7 +203,12 @@ const cartContent = document.getElementById('cart-content')
 
   const ViewContent = () => {
     if (cartCounter != 0) {
-    cartContent.style.opacity = 1 
+      if (cartContent.style.opacity != 0) {
+        cartContent.style.opacity = 0
+      } else {
+        cartContent.style.opacity = 1
+      }
+     
     }
     
   }
@@ -217,6 +227,7 @@ const cartContent = document.getElementById('cart-content')
   setTimeout(() => {  elem.remove(); }, 250);
   const phone = document.createElement('div')
   phone.innerText = elem.id
+  phone.className = 'phone-in-cart'
   cartContent.appendChild(phone)
 }
    
