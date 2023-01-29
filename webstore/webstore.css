@@ -167,6 +167,7 @@ img:hover {
   margin: 0 auto;
   text-align: center;
   flex-direction: column;
+  width: auto;
 
 }
 .phone-title {
